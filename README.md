@@ -1,0 +1,1 @@
+Nesse projeto criei um Crud utilizando PostgreSQL, flyway-core, Exceções Handler, validações @Valid e muito mais

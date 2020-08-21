@@ -1,0 +1,14 @@
+CREATE SEQUENCE seq_ordem_servico START 1;
+create table ordem_servico(
+    id bigint not null default nextval('seq_ordem_servico'),
+	cliente_id bigint not null,
+	descricao text not null,
+	preco decimal(10,2) not null,
+	status varchar(20) not null,
+	data_abertura timestamp not null,
+	data_finalizacao timestamp,
+	primary key (id)
+);
+
+alter table ordem_servico add constraint fk_ordem_servico_cliente 
+foreign key (cliente_id) references cliente (id);
